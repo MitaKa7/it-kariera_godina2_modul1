@@ -1,11 +1,13 @@
-﻿using InheritanceExample;
+﻿using RandomElements;
 
-Person person = new Person("Dimitar", 17);
+List<int> ints = Console.ReadLine()
+    .Split()
+    .Select(int.Parse)
+    .ToList();
 
-Console.WriteLine(person);
+RandomList<int> nums = new RandomList<int>(ints);
 
-Employee employee = new Employee("Dimitar", 17, "Bulgarian Coffee Services");
-Console.WriteLine(employee);
-
-Student student = new Student("Dimitar", 17, "NEG-GOETHE");
-Console.WriteLine(student);
+for (int i = 0; i < 10 ; i++)
+{
+    Console.WriteLine(nums.RandomElement());
+}
