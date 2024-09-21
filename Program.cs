@@ -1,11 +1,17 @@
-﻿using InheritanceExample;
+﻿using AbstractOOP;
 
-Person person = new Person("Dimitar", 17);
 
-Console.WriteLine(person);
+List<Animal> zoo = new List<Animal>();
 
-Employee employee = new Employee("Dimitar", 17, "Bulgarian Coffee Services");
-Console.WriteLine(employee);
+Animal cat = new Cat();
+Animal dog = new Dog();
 
-Student student = new Student("Dimitar", 17, "NEG-GOETHE");
-Console.WriteLine(student);
+zoo.Add(cat);
+zoo.Add(dog);
+
+foreach (Animal animal in zoo)
+{
+    animal.MakeSound();
+    animal.Eat();
+}
+ 
