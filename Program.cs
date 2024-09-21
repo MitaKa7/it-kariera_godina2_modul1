@@ -1,11 +1,16 @@
-﻿using InheritanceExample;
+﻿using Shapes;
 
-Person person = new Person("Dimitar", 17);
+Circle circle = new Circle("Blue", 3);
+Square square = new Square("Red", 5);
+Triangle triangle = new Triangle("Green", 2);
 
-Console.WriteLine(person);
+List<Shape> shapes = new List<Shape>();
+shapes.Add(circle);
+shapes.Add(square);
+shapes.Add(triangle);
 
-Employee employee = new Employee("Dimitar", 17, "Bulgarian Coffee Services");
-Console.WriteLine(employee);
-
-Student student = new Student("Dimitar", 17, "NEG-GOETHE");
-Console.WriteLine(student);
+foreach (Shape shape in shapes)
+{
+    Console.WriteLine(shape);
+    Console.WriteLine($"{shape.GetArea():F2}");
+}
