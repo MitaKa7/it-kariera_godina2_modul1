@@ -1,7 +1,15 @@
-﻿using FractionExcercise;
-using System.Collections.Concurrent;
+﻿using Compare_People;
 
-Fraction f1 = new Fraction(1, 2);
-Fraction f2 = new Fraction(1, 4);
+List<Person> people = new List<Person>();
 
-Console.WriteLine(f1 + f2);
+people.Add(new Person("Ivan", 170));
+people.Add(new Person("Sonya", 150));
+people.Add(new Person("Maria", 150));
+people.Add(new Person("Georgi", 180));
+
+people.Sort();
+
+foreach (Person person in people)
+{
+    Console.WriteLine(person);
+}
