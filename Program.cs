@@ -1,10 +1,18 @@
-﻿namespace ConsoleApp15
+try
 {
-    internal class Program
+
+    using (StreamReader reader = new StreamReader("file.txt"))
     {
-        static void Main(string[] args)
+        string line = reader.ReadLine();
+        while (line != null)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine(line);
+            line = reader.ReadLine();
         }
     }
+    
+}
+catch(FileNotFoundException)
+{
+    Console.WriteLine("The file does not exist.");
 }
